@@ -1,0 +1,12 @@
+FROM php:7.2-apache
+
+COPY src/ /var/www/html/
+
+RUN apt update
+RUN apt install wget -y
+RUN apt install zip 
+
+RUN bash "/var/www/html/composer_install.sh"
+RUN php composer.phar require bshaffer/oauth2-server-php "^1.10"
+
+
