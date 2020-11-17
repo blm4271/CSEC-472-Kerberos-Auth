@@ -1,0 +1,7 @@
+version: '3'
+services:
+   kerblab-auth-serv:
+      build: ./auth-serv
+      expose:
+          - "80"   
+   
